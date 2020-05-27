@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./chajian/node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>多种颜色卡片</h2>
+  <div class="card">
+    <div class="card-body">Basic card</div>
+  </div>
+  <br>
+  <div class="card bg-primary text-white">
+    <div class="card-body">Primary card</div>
+  </div>
+  <br>
+  <div class="card bg-success text-white">
+    <div class="card-body">Success card</div>
+  </div>
+  <br>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="myModalLabel">新增</h4>
+          </div>
+          <div class="modal-body">
+
+              <div class="form-group">
+                  <label for="txt_departmentname">部门名称</label>
+                  <input type="text" name="txt_departmentname" class="form-control" id="txt_departmentname" placeholder="部门名称">
+              </div>
+              <div class="form-group">
+                  <label for="txt_parentdepartment">上级部门</label>
+                  <input type="text" name="txt_parentdepartment" class="form-control" id="txt_parentdepartment" placeholder="上级部门">
+              </div>
+              <div class="form-group">
+                  <label for="txt_departmentlevel">部门级别</label>
+                  <input type="text" name="txt_departmentlevel" class="form-control" id="txt_departmentlevel" placeholder="部门级别">
+              </div>
+              <div class="form-group">
+                  <label for="txt_statu">描述</label>
+                  <input type="text" name="txt_statu" class="form-control" id="txt_statu" placeholder="状态">
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+              <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <button class="aaa"></button>
+
+
+</body>
+
+<style>
+  .aaa {
+    width: 200px;
+    height: 50px;
+    background-color: blueviolet;
+  }
+</style>
+
+<script>
+
+$(document).ready(function(){
+  $(".aaa").click(function(){
+    $('#myModal').modal();
+  })
+});
+
+
+
+
+    //  $("#myModalLabel").text("新增");
+
+
+
+
+
+</script>
+
+
+</html>

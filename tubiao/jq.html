@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <link rel="stylesheet" href="jq.css">
+</head>
+
+
+<body>
+    <div class="main-a"> <!--主体部分a，包括快捷导航、待办事项、公告栏-->
+        <div class="shortcut">  <!--快捷导航-->
+            <ul>
+                <li>快捷导航</li>
+                <li>快捷导航</li>
+                <li>快捷导航</li>
+                <li>快捷导航</li>
+                <li>快捷导航</li>
+            </ul>
+        </div>
+
+        <div class="backlog"> <!--待办事项-->
+            <div class="khgj"> <!--客户跟进-->
+
+            </div>
+
+            <div class="jycb"> <!--交易催办-->
+
+            </div>
+
+            <div class="kxjb"> <!--款项借办-->
+
+            </div>
+        </div>
+
+        <div class="notice"> <!--公告栏-->
+
+        </div>
+    </div>
+
+    <div class="main-b"><!--主体部分b，数据概览-->
+        <div class="date-search"> <!--按日期搜索-->
+
+        </div>
+
+        <div class="ackh"> <!--案场客户概览-->
+
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+<script>
+
+    var myChart = echarts.init(document.querySelector(".ackh"));
+
+    myChart.setOption({
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',    // 设置图表类型为饼图
+                radius: '50%',  // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+                data:[          // 数据数组，name 为数据项名称，value 为数据项值
+                    {value:235, name:'视频广告'},
+                    {value:274, name:'联盟广告'},
+                    {value:310, name:'邮件营销'},
+                    {value:335, name:'直接访问'},
+                    {value:400, name:'搜索引擎'}
+                ],
+                itemStyle:{
+                    normal:{
+                        shadowBlur: 0
+                        
+                    }
+                }
+            }
+        ]
+    })
+
+
+</script>
+
+
+</html>

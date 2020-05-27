@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-a {   /*主体部分a*/
+    position: relative;
+    width: 1400px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(240, 126, 126);
+}
+
+.shortcut {  /*快捷导航*/
+    position: absolute;
+    width: 600px;
+    height: 50px;
+    left: 150px;
+    top: 10px;
+    padding: 0;
+    background-color: rgb(255, 211, 154);
+}
+
+.shortcut ul {
+    margin: 0;
+    padding: 0;
+}
+
+.shortcut li {
+    display: block;
+    list-style: none;
+    float: left;
+    width: 110px;
+    height: 45px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 45px;
+    background-color: rgb(112, 176, 250);
+}
+
+
+.backlog {  /*待办事项*/
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    left: 50px;
+    top: 70px;
+    background-color: rgb(255, 185, 237);
+}
+
+.khgj {
+    float: left;
+    width: 250px;
+    height: 280px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: rgb(191, 150, 255);
+}
+
+.jycb {
+    float: left;
+    width: 250px;
+    height: 280px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: rgb(191, 150, 255);
+}
+
+.kxjb {
+    float: left;
+    width: 250px;
+    height: 280px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: rgb(191, 150, 255);
+}
+
+.notice {  /*公告栏*/
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    left: 950px;
+    top: 20px;
+    background-color: rgb(188, 255, 174);
+}
+
+
+/*主体部分b，数据概览*/
+.main-b {
+    position: relative;
+    width: 1400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: rgb(180, 225, 255);
+}
+
+.date-search {
+    position: absolute;
+    width: 500px;
+    height: 45px;
+    top: 5px;
+    left: 30px;
+    background-color: rgb(255, 157, 177);
+}
+.ackh {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    background-color: rgb(224, 255, 207);
+}

@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shouye.css">
+
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+
+    
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="./chajian/node_modules/jquery/dist/jquery.min.js"></script>
+ 
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+
+    <script src="./node_modules/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>      
+
+
+</head>
+
+
+<body style="background-color:rgb(245, 245, 245)">
+
+    <div class="xlcd"> <!--头部下拉菜单-->
+
+
+        <div class="qiehuan000">
+            <ul class="all000">
+                <li class="biaoti000">本人及下属</li>
+
+                
+                <ul class="bbb000">
+                    <li class="m100">到访客户统计</li>
+                    <li class="m200">转化率</li>
+                    <li class="m300">渠道分析</li>
+                    <li class="m400">销售漏斗</li>
+                </ul>
+            
+            </ul>
+        </div>
+
+        <div class="sj"> <!--时间范围-->
+            <div class="dropdown" > <!--时间范围下拉框-->
+                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">时间范围
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">今天</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">昨天</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">本周</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">上周</a>
+                    </li>
+
+                    <li role="presentation" class="zdysj">  <!--自定义时间-->
+                        <a role="menuitem" tabindex="-1" href="#" data-stopPropagation="true">自定义</a>
+                    </li>
+
+                    <li role="presentation">
+                        <input type="text"  placeholder="开始日期" class="ksrq" data-provide="datepicker">
+                    </li>
+
+                    <li role="presentation">
+                        <input type="text" placeholder="结束日期" class="jsrq" data-provide="datepicker">
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="shezhi">  <!--设置-->
+            <image class="sz" src="./icon/shezhi.png">
+                
+            </image>
+        </div>
+
+    </div>
+
+    <div class="bt">  <!--第二部分按钮-->
+        <div class="bt1">
+            案场客户           
+        </div>
+        <div class="bt2">
+            外场客户
+        </div>
+        <div class="bt3">
+            销售机会
+        </div>
+        <div class="bt4">
+            销售台账
+        </div>
+    </div>
+
+
+
+    <div class="pannel xsjb"> <!--第二部分，案场客户-->
+
+        <div class="dyh">
+            <div class="xzkh1"> <!--新增客户-->
+
+                <image class="mmg" src="./icon/dushu.png" >
+                        
+                </image>
+
+                <div class="mm1">
+    
+                    <div class="mz1"> <!--标题名字-->
+                        新访客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="xzkh2"> <!--新增客户-->
+                <image class="mmg" src="./icon/gouwu.png" ></image>
+                <div class="mm1">
+                    <div class="mz1"> <!--标题名字-->
+                        老访客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh3"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">
+                    <div class="mz1"> <!--标题名字-->
+                        逾期客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh4"> <!--新增客户-->
+                <image class="mmg" src="./icon/qianbao.png" ></image>
+                <div class="mm1">
+                    <div class="mz1"> <!--标题名字-->
+                        公共客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="deh">
+            <div class="xzkh1"> <!--新增客户-->
+
+                <div class="mm1">
+    
+                    <image class="mmg" src="./icon/dushu.png" >
+                        
+                    </image>
+    
+                    <div class="mz1"> <!--标题名字-->
+                        新访客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="xzkh2"> <!--新增客户-->
+                <image class="mmg" src="./icon/gouwu.png" ></image>
+                <div class="mm1">
+                    <div class="mz1"> <!--标题名字-->
+                        老访客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh3"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">
+                    <div class="mz1"> <!--标题名字-->
+                        逾期客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh4"> <!--新增客户-->
+                <image class="mmg" src="./icon/qianbao.png" ></image>
+                <div class="mm1">
+                    <div class="mz1"> <!--标题名字-->
+                        公共客户(组)
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        较上月
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        0
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        0%
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    </div>
+
+    <div class="wckh">
+        <div class="dyh">
+            <div class="xzkh1"> <!--新增客户-->
+                <image class="mmg" src="./icon/dushu.png" >
+                        
+                </image>
+
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>来电客户(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="xzkh2"> <!--新增客户-->
+               
+                <image class="mmg" src="./icon/gouwu.png" ></image>
+
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>行销拓客(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh3"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>渠道转介(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh4"> <!--新增客户-->
+                <image class="mmg" src="./icon/qianbao.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>营销获客(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="xsjh">
+        <div class="dyh">
+            <div class="xzkh1"> <!--新增客户-->
+                <image class="mmg" src="./icon/dushu.png" >
+                        
+                </image>
+
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>A类客户(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="xzkh2"> <!--新增客户-->
+                <image class="mmg" src="./icon/gouwu.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>B类客户(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh3"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>C类客户(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh4"> <!--新增客户-->
+                <image class="mmg" src="./icon/qianbao.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>D类客户(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="xstz">
+        <div class="dyh">
+            <div class="xzkh1"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>认筹房间(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="xzkh2"> <!--新增客户-->
+                <image class="mmg" src="./icon/gouwu.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>认筹货值(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh3"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>认筹资金(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh4"> <!--新增客户-->
+                <image class="mmg" src="./icon/qianbao.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>预筹资金(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="deh">
+            <div class="xzkh1"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>成交房间(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="xzkh2"> <!--新增客户-->
+                <image class="mmg" src="./icon/gouwu.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>成交货值(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh3"> <!--新增客户-->
+                <image class="mmg" src="./icon/huiyuan.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>已收款额(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="xzkh4"> <!--新增客户-->
+                <image class="mmg" src="./icon/qianbao.png" ></image>
+                <div class="mm1">    
+                    <div class="mz1"> <!--标题名字-->
+                        <h4>计划回款(组)</h4>
+                    </div>
+                    <div class="mz2"> <!--标题名字-->
+                        <h4>较上月</h4>
+                    </div>
+                </div>
+    
+                <div class="mm2">
+                    <div class="mz3"> <!--标题名字-->
+                        <h4>0</h4>
+                    </div>
+                    <div class="mz4"> <!--标题名字-->
+                        <h4>0%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="aaa"> <!--第三部分-数据分析-数据概览-->
+        <div class="panel htjemb panel-default"> <!--数据分析-->
+            <div class="panel-heading"> <!--标题-->
+                <image src="./icon/sjfx.png" style="width: 20px;height: 20px;margin-top: -4px;">
+                </image>
+                数据分析
+            </div>
+
+
+
+
+            <div class="zzt"> <!--柱状图-到访客户统计-->
+
+            </div>
+
+            <div class="zhl"> <!--转化率-->
+                <h3>转化率分析</h3>
+                <h4>(2015/5/1~2020/5/30)</h4>
+
+                <div class="bbkh"> <!--报备客户转访率-->
+
+                </div>
+
+
+                <div class="dfkh2"> <!--到访客户成交率-->
+
+                </div>
+
+
+            </div>
+
+            <div class="qdfx"> <!--渠道分析-->
+                <h3>渠道分析</h3>
+                <h4>(2015/5/1~2020/5/30)</h4>
+
+                
+                <div class="qdtd"> <!--渠道团队类别分析-->
+
+                </div>
+
+                <div class="qdkh"> <!--渠道客户转化分析-->
+
+                </div>
+            </div>
+
+            <div class="xsld"> <!--销售漏斗-->
+
+                <h3>销售漏斗分析</h3>
+                <h4>(2015/5/1~2020/5/30)</h4>
+
+
+                <div class="xsjhfx"> <!--销售机会分析-->
+
+                </div>
+
+                <div class="cjkhfx"> <!--成交客户分析-->
+
+                </div>
+
+            </div>
+
+
+            <div class="qiehuan">
+                <ul class="all">
+                    <li class="biaoti">到访客户统计</li>
+
+                    
+                    <ul class="bbb">
+                        <li class="m1">到访客户统计</li>
+                        <li class="m2">转化率</li>
+                        <li class="m3">渠道分析</li>
+                        <li class="m4">销售漏斗</li>
+                    </ul>
+                
+                </ul>
+            </div>
+
+
+
+
+
+
+        </div>
+    
+        <div class="panel sjhz panel-default"> <!--数据汇总-->
+            <div class="panel-heading">
+                <image src="./icon/sjgl.png" style="width: 20px;height: 20px;margin-top: -4px;">
+                </image>
+                数据概览
+            </div>
+
+            <div class="sj1"> <!--汇总的数据-->
+                <h5>报备客户<strong style="font-size: 25px;">0</strong>组，案场客户<strong style="font-size: 25px;">0</strong>组</h5>
+            </div>
+
+            <div class="sj2"> <!--汇总的数据-->
+                
+                <h5>机会客户<strong style="font-size: 25px;">0</strong>组，成交客户<strong style="font-size: 25px;">0</strong>组</h5>
+            </div>
+
+            <div class="sj2"> <!--汇总的数据-->
+                
+                <h5>逾期客户<strong style="font-size: 25px;">0</strong>组，公共客户<strong style="font-size: 25px;">0</strong>组</h5>
+            </div>
+
+            <div class="sj2"> <!--汇总的数据-->
+                
+                <h5>销售总额<strong style="font-size: 25px;">0</strong>组，公共客户<strong style="font-size: 25px;">0</strong>组</h5>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="aaa">   <!--第四部分-销售数据-常用模块-->
+        <div class="panel htjemb panel-default"> <!--合同金额目标及完成情况-->
+            <div class="panel-heading">
+                <image src="./icon/xssj.png" style="width: 20px;height: 20px;margin-top: -4px;">
+                </image>
+                销售数据
+            </div>
+            <div class="bzt-xszb"> <!--饼装图-销售指标-->
+                <h4>回款指标</h4>
+                <div class="bzt2">
+
+                </div>
+                
+
+                <div class="zjwz"> <!--环形图中间文字-->
+                    70%
+                </div>
+
+            </div>
+
+            <div class="zxt1">
+                <h4>回款金额(万元)</h4>
+                <div class="zxt-xsze"> <!--折线图-销售总额-->
+
+                </div>
+            </div>
+
+
+
+            <div class="bzt-xszb222"> <!--饼装图-销售指标-->
+                <h4>销售指标</h4>
+                <div class="bzt2222">
+
+                </div>
+                
+
+                <div class="zjwz222"> <!--环形图中间文字-->
+                    70%
+                </div>
+
+            </div>
+
+            <div class="zxt1222">
+                
+                <div class="zxt-xsze222"> <!--双折线图-销售总额-->
+
+                </div>
+            </div>
+
+
+
+
+            <div class="qiehuan2">   <!--回款金额与销售指标之间的切换-->
+                <ul class="all2">
+                    <li class="biaoti2">回款金额</li>
+
+                    
+                    <ul class="bbb2">
+                        <li class="m111">回款金额</li>
+                        <li class="m22">销售指标</li>
+                    </ul>
+                
+                </ul>
+            </div>
+
+
+        </div>
+    
+        <div class="panel sjhz panel-default"> <!--数据汇总-->
+            <div class="panel-heading">
+                <image src="./icon/cymk.png" style="width: 20px;height: 20px;margin-top: -4px;">
+                </image>
+                常用模块
+            </div>
+
+            <div class="bbl"> <!--报表类-->
+                报表类
+            </div>
+
+            <div class="bb1">
+                <div class="bb2">
+                    统计日志
+                </div>
+
+                <div class="bb2">
+                    客户分析
+                </div>
+
+                <div class="bb2">
+                    销售指标
+                </div>
+
+                <div class="bb2">
+                    绩效排名
+                </div>
+            </div>
+
+            <div class="ccl"> <!--操作类-->
+                    操作类
+            </div>
+
+            <div class="cc1">
+                <div class="cc2">
+                    房间销控
+                </div>
+
+                <div class="cc2">
+                    交易收款
+                </div>
+
+                <div class="cc2">
+                    成员管理
+                </div>
+                    
+                <div class="cc2">
+                    待办事项
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+
+    <div class="aaa">   <!--第五部分-绩效排名-跟进提醒-->
+
+        <div class="panel htjemb panel-default"> <!--绩效排名-->
+
+            <div class="panel-heading">
+                <image src="./icon/jxpm.png" style="width: 20px;height: 20px;margin-top: -4px;">
+                </image>
+                绩效排名
+            </div>
+
+            <div class="tdxzgr2"> <!--团队小组个人-->
+
+                <div class="tud">团队</div>
+                <div class="xz">小组</div>
+                <div class="gr">个人</div>
+
+            </div>
+
+            <div class="panel jxpm panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    团队绩效排名
+                </div>
+              
+                <!-- Table -->
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <th>团队</th>
+                        <th>排名</th>
+                        <th>报备客户（组）</th>
+                        <th>到访客户（组）</th>
+                        <th>认购金额（万元）</th>
+                        <th>签约金额（万元）</th>
+                        <th>回款金额（万元）</th>
+                    </thead>
+
+
+                    <tr>
+                        <td>渠道一部</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>渠道二部</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="panel jxpm2 panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    小组绩效排名
+                </div>
+              
+                <!-- Table -->
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <th>小组</th>
+                        <th>排名</th>
+                        <th>报备客户（组）</th>
+                        <th>到访客户（组）</th>
+                        <th>认购金额（万元）</th>
+                        <th>签约金额（万元）</th>
+                        <th>回款金额（万元）</th>
+                    </thead>
+
+
+                    <tr>
+                        <td>渠道一组</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>渠道二组</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="panel jxpm3 panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    个人绩效排名
+                </div>
+              
+                <!-- Table -->
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <th>个人</th>
+                        <th>排名</th>
+                        <th>报备客户（组）</th>
+                        <th>到访客户（组）</th>
+                        <th>认购金额（万元）</th>
+                        <th>签约金额（万元）</th>
+                        <th>回款金额（万元）</th>
+                    </thead>
+
+
+                    <tr>
+                        <td>张三</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>李四</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+ 
+
+        </div>
+    
+        <div class="panel sjhz panel-default"> <!--跟进提醒-->
+            <div class="panel-heading">
+                <image src="./icon/gjtx.png" style="width: 20px;height: 20px;margin-top: -4px;">
+                </image>
+                跟进提醒
+            </div>
+
+            <div class="sj1"> <!--汇总的数据-->
+                
+                <h5>3天内逾期客户<strong style="font-size: 25px;">0</strong>组，已逾期客户<strong style="font-size: 25px;">0</strong>组</h5>
+            </div>
+
+            <div class="sj2"> <!--汇总的数据-->
+                
+                <h5>待认购客户<strong style="font-size: 25px;">0</strong>组，待签约客户<strong style="font-size: 25px;">0</strong>组</h5>
+            </div>
+
+            <div class="sj2"> <!--汇总的数据-->
+                
+                <h5>3天内逾期回款<strong style="font-size: 25px;">0</strong>组，已逾期回款<strong style="font-size: 25px;">0</strong>组</h5>
+            </div>
+
+            <div class="sj2"> <!--汇总的数据-->
+                
+                <h5>待审核事假<strong style="font-size: 25px;">0</strong>个</h5>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-weight: 700;">新访客户</h4>
+                </div>
+                <div class="modal-body" style="overflow:scroll;">
+    
+                <div class="fff">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <th>客户姓名</th>
+                            <th>电话</th>
+                            <th>邮箱</th>
+                            <th>客户级别</th>
+                            <th>客户行业</th>
+                            <th>成交状态</th>
+                            <th>跟进状态</th>
+                            <th>负责人</th>
+                        </thead>
+    
+    
+                        <tr>
+                            <td>张三</td>
+                            <td>87654321</td>
+                            <td>789456123@qq.com</td>
+                            <td>p8</td>
+                            <td>房地产</td>
+                            <td>未成交</td>
+                            <td>已跟进</td>
+                            <td>王五</td>
+    
+                        </tr>
+                        
+                        <tr>
+                            <td>李四</td>
+                            <td>87654321</td>
+                            <td>789456123@qq.com</td>
+                            <td>p8</td>
+                            <td>金融</td>
+                            <td>未成交</td>
+                            <td>已跟进</td>
+                            <td>赵六</td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+    
+                        </tr>
+                    </table>
+                </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+
+
+
+<script src="shouye.js">
+
+</script>
+
+
+
+
+</html>
